@@ -17,7 +17,7 @@ def generate_sample_data():
 app_ui = ui.page_fluid(
     ui.h1("Simple Clustering App"),
     ui.layout_sidebar(
-        ui.panel_sidebar(
+        ui.sidebar(
             ui.h3("Data Input"),
             ui.input_file("file", "Upload CSV file (optional)", 
                          accept=[".csv"], multiple=False),
@@ -37,16 +37,14 @@ app_ui = ui.page_fluid(
             ui.output_text("data_info"),
             width=3
         ),
-        ui.panel_main(
-            ui.h3("Results"),
-            ui.output_plot("cluster_plot"),
-            ui.br(),
-            ui.h4("Cluster Centers"),
-            ui.output_table("cluster_centers"),
-            ui.br(),
-            ui.h4("Data with Cluster Labels"),
-            ui.output_table("clustered_data")
-        )
+        ui.h3("Results"),
+        ui.output_plot("cluster_plot"),
+        ui.br(),
+        ui.h4("Cluster Centers"),
+        ui.output_table("cluster_centers"),
+        ui.br(),
+        ui.h4("Data with Cluster Labels"),
+        ui.output_table("clustered_data")
     )
 )
 
