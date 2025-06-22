@@ -6,3 +6,4 @@ pandas
 ridgeplot
 matplotlib
 scikit-learn
+Jinja2
